@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    // for ($i=0; $i < 200 ; $i++) {
+    //     visitor()->visit();
+    // }
     return view('welcome');
     // dd(request());
     // return request()->ip();

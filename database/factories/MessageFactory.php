@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,8 +17,13 @@ class MessageFactory extends Factory
      */
     public function definition(): array
     {
+        $user = User::inRandomOrder()->first();
         return [
-            //
+            "name" => $this->faker->name,
+            "email" => $this->faker->email,
+            "message" => $this->faker->realText($maxNbChars = 500, $indexSize = 2),
+            "is_read" => $this->faker->numberBetween($min = 0, $max = 1),
+            "user_id" => $user->id,
         ];
     }
 }
