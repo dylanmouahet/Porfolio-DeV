@@ -12,8 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('visites', function (Blueprint $table) {
-            $table->id();
+            $table->uuid("id")->primary();
+            $table->ipAddress("ip")->nullable();
+            $table->string("browser")->nullable();
+            $table->string("localization")->nullable();
+            $table->string("country")->nullable();
+            $table->string("city")->nullable();
+            $table->string("plateform")->nullable();
+            $table->uuid('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

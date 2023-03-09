@@ -6,7 +6,7 @@ use App\Models\Concerns\UsesUuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Experience extends Model
+class CategoryArticle extends Model
 {
     use HasFactory;
     use UsesUuid;

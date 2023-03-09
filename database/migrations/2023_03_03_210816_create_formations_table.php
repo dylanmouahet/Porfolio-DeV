@@ -12,8 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('formations', function (Blueprint $table) {
-            $table->id();
+            $table->uuid("id")->primary();
+            $table->string("title");
+            $table->string("school");
+            $table->date("date");
+            $table->string("description")->nullable();
+            $table->enum("type", ["diplome", "certification"])->nullable();
+            $table->boolean("view")->default(true);
+            $table->uuid('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

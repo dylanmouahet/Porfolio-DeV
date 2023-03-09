@@ -12,8 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('services', function (Blueprint $table) {
-            $table->id();
+            $table->uuid("id")->primary();
+            $table->string("name");
+            $table->string("description");
+            $table->string("icon")->nullable();
+            $table->boolean("view")->default(true);
+            $table->uuid('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
