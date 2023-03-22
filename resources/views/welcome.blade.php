@@ -1,1 +1,2 @@
-@extends("layout.master")
+{{-- @extends("layout.master") --}}
+@livewire('counter')

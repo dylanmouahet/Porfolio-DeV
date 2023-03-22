@@ -28,7 +28,7 @@ class FeedbackFactory extends Factory
             "date" => $date,
             "url_photo" => $this->faker->imageUrl($width = 640, $height = 480),
             "view" => rand(0, 1),
-            "user_id" => $user->id,
+            // "user_id" => $user->id,
         ];
     }
 }

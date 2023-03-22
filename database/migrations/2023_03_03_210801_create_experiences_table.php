@@ -19,8 +19,8 @@ return new class extends Migration
             $table->date("start_year")->nullable();
             $table->date("end_year")->nullable();
             $table->boolean("view")->default(true);
-            $table->uuid('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            // $table->uuid('user_id');
+            // $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
             $table->softDeletes();
         });

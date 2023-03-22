@@ -23,7 +23,7 @@ class MessageFactory extends Factory
             "email" => $this->faker->email,
             "message" => $this->faker->realText($maxNbChars = 500, $indexSize = 2),
             "is_read" => $this->faker->numberBetween($min = 0, $max = 1),
-            "user_id" => $user->id,
+            // "user_id" => $user->id,
         ];
     }
 }

@@ -27,7 +27,7 @@ class FormationFactory extends Factory
             "description" => $this->faker->paragraph($nbSentences = 2, $variableNbSentences = true),
             "type" => $this->faker->randomElement(["diplome", "certification"], 1),
             "view" => rand(0, 1),
-            "user_id" => $user->id,
+            // "user_id" => $user->id,
         ];
     }
 }

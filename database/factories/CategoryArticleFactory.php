@@ -20,7 +20,7 @@ class CategoryArticleFactory extends Factory
         $user = User::inRandomOrder()->first();
         return [
             "name" => $this->faker->randomElement(["Mobile", "Dev", "Design", "Web", "Other"], 1),
-            "user_id" => $user->id,
+            // "user_id" => $user->id,
         ];
     }
 }

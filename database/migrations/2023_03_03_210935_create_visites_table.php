@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string("country")->nullable();
             $table->string("city")->nullable();
             $table->string("plateform")->nullable();
-            $table->uuid('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            // $table->uuid('user_id');
+            // $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -26,7 +26,7 @@ class ProjetFactory extends Factory
             "url_img" => $this->faker->imageUrl($width = 640, $height = 480),
             "category" => $this->faker->randomElement(["design", "web app", "mobile app", "website", "other"]),
             "view" => rand(0, 1),
-            "user_id" => $user->id,
+            // "user_id" => $user->id,
         ];
     }
 }

@@ -23,7 +23,7 @@ class SkillFactory extends Factory
             "name" => $this->faker->randomElement(["HTML", "CSS", "JavaScript", "Bootstrap", "Node.JS", "PHP", "Laravel", "JAVA", "Python", "Flutter"],1),
             "level" => rand(30, 100),
             "view" => rand(0, 1),
-            "user_id" => $user->id,
+            // "user_id" => $user->id,
         ];
     }
 }

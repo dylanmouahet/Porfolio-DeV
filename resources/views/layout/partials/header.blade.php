@@ -8,7 +8,7 @@
         </div>
 
         <div class="navbar-brand">
-            <a href="index.html" class="d-inline-flex align-items-center">
+            <a href="{{ route('dashboard') }}" class="d-inline-flex align-items-center">
                 <img src="{{ asset('assets/images/logo_icon.svg') }}" alt="">
                 <b style="color: white; font-size: 1.4em; margin-left:15px;">{{ env("APP_NAME") }}</b>
                 {{-- <img src="{{ asset('assets/images/logo_text_light.svg') }}" class="d-none d-sm-inline-block h-16px ms-3"
@@ -56,18 +56,18 @@
             <li class="nav-item nav-item-dropdown-lg dropdown">
                 <a href="#" class="navbar-nav-link align-items-center rounded p-1" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    <div class="status-indicator-container">
-                        <img src="../../../assets/images/demo/users/face11.jpg" class="w-32px h-32px rounded" alt="">
-                        <span class="status-indicator bg-success"></span>
+                    <div class="status-indicator-container p-1 rounded" style="background: linear-gradient(to right,#de5367, #4a6bbf); border-raduis:50px !important;" >
+                        <b>{{ initials(Auth::user()->name) }}</b>
+                        {{-- <span class="status-indicator bg-success"></span> --}}
                     </div>
-                    <span class="d-none d-lg-inline-block mx-lg-2">Victoria</span>
+                    <span class="d-none d-lg-inline-block mx-lg-2">{{ Auth::user()->name }}</span>
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-end">
                     <a href="#" class="dropdown-item"><i class="ph-user-gear"></i> &nbsp;&nbsp; Mon compte</a>
                     <div class="divider"></div>
                     <hr>
-                    <a href="#" class="dropdown-item"><i class="ph-power"></i> &nbsp;&nbsp;Déconnexion</a>
+                    <a href="{{ route("auth.logout") }}" class="dropdown-item"><i class="ph-power"></i> &nbsp;&nbsp;Déconnexion</a>
                 </div>
             </li>
         </ul>

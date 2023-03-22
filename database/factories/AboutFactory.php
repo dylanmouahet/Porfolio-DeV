@@ -35,7 +35,7 @@ class AboutFactory extends Factory
             "twitter" => $this->faker->url,
             "github" => $this->faker->url,
             "linkedin" => $this->faker->url,
-            "user_id" => $user->id,
+            // "user_id" => $user->id,
         ];
     }
 }

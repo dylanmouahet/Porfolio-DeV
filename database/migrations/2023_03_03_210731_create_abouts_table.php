@@ -29,8 +29,8 @@ return new class extends Migration
             $table->string("twitter")->nullable();
             $table->string("github")->nullable();
             $table->string("linkedin")->nullable();
-            $table->uuid('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            // $table->uuid('user_id');
+            // $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -2,7 +2,7 @@
 <div class="page-content">
 
     <!-- Main sidebar -->
-    <div class="sidebar sidebar-dark sidebar-main sidebar-expand-lg">
+    <div class="sidebar sidebar-dark sidebar-main sidebar-expand-lg sidebar-main-resized">
 
         <!-- Sidebar content -->
         <div class="sidebar-content">
@@ -38,7 +38,7 @@
                         <i class="ph-dots-three sidebar-resize-show"></i>
                     </li> --}}
                     <li class="nav-item">
-                        <a href="../full/index.html" class="nav-link">
+                        <a href="{{ route('dashboard') }}" class="nav-link {{ setActiveRoute("dashboard") }}">
                             <i class="ph-house"></i>
                             <span>Dashboard</span>
                         </a>

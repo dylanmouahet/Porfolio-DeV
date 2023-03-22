@@ -10,4 +10,9 @@ class Article extends Model
 {
     use HasFactory;
     use UsesUuid;
+
+    public function categorie()
+    {
+        return $this->belongsTo(CategoryArticle::class, "category_article_id", "id");
+    }
 }

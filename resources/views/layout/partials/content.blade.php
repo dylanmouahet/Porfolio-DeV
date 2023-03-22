@@ -31,3 +31,4 @@
 
         <!-- Content area -->
         <div class="content">
+            @yield("content")

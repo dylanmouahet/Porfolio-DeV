@@ -30,7 +30,7 @@ class ArticleFactory extends Factory
             "view_count" => $this->faker->numberBetween($min = 125, $max = 5000),
             "view" => $this->faker->numberBetween($min = 0, $max = 1),
             "category_article_id" => $category->id,
-            "user_id" => $user->id,
+            // "user_id" => $user->id,
         ];
     }
 }

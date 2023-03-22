@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string("description")->nullable();
             $table->enum("type", ["diplome", "certification"])->nullable(); // 1-> Displome, 2 -> Certificate
             $table->boolean("view")->default(true);
-            $table->uuid('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            // $table->uuid('user_id');
+            // $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
             $table->softDeletes();
         });

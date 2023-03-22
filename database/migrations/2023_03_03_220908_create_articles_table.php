@@ -23,8 +23,8 @@ return new class extends Migration
             $table->boolean("view")->default(true);
             $table->uuid('category_article_id');
             $table->foreign('category_article_id')->references('id')->on('category_articles');
-            $table->uuid('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            // $table->uuid('user_id');
+            // $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
             $table->softDeletes();
         });

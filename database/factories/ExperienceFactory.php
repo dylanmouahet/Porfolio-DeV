@@ -27,7 +27,7 @@ class ExperienceFactory extends Factory
             "start_year" => $start_date,
             "end_year" => $end_date,
             "view" => rand(0,1),
-            "user_id" => $user->id,
+            // "user_id" => $user->id,
         ];
     }
 }
