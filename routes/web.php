@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Livewire\About;
 use App\Http\Livewire\Auth;
 use App\Http\Livewire\Dashboard;
+use App\Http\Livewire\Service;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +41,12 @@ Route::get('/clear', function () {
 Route::middleware(["auth"])->group(function () {
     Route::get('/', Dashboard::class)->name('dashboard');
     Route::get('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
+    Route::middleware([])->prefix('about')->group(function () {
+        Route::get('/', About::class)->name('about.index');
+    });
+    Route::middleware([])->prefix('service')->group(function () {
+        Route::get('/', Service::class)->name('service.index');
+    });
 });
 
 Route::middleware(["guest"])->prefix('login')->group(function () {

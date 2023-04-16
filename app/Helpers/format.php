@@ -15,3 +15,25 @@ function reduceText($texte, $longueur_max = 100){
 
     return $texte;
 }
+
+function getCategoryColor(String $category)
+{
+    switch ($category) {
+        case 'Design':
+            return "warning";
+            break;
+        case 'Dev':
+            return "secondary";
+            break;
+        case 'Mobile':
+            return "danger";
+            break;
+        case 'Web':
+            return "info";
+            break;
+
+        default:
+            return "success";
+            break;
+    }
+}

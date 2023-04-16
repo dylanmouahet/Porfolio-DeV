@@ -50,13 +50,13 @@
                         <i class="ph-dots-three sidebar-resize-show"></i>
                     </li>
                     <li class="nav-item">
-                        <a href="../full/index.html" class="nav-link">
+                        <a href="{{ route('about.index') }}" class="nav-link {{ setActiveRoute("about.index") }}">
                             <i class="ph-user-circle"></i>
                             <span>Profil</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="../full/index.html" class="nav-link">
+                        <a href="{{ route('service.index') }}" class="nav-link">
                             <i class="ph-handshake"></i>
                             <span>Services</span>
                         </a>

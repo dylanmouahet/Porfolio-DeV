@@ -10,13 +10,6 @@ use Livewire\Component;
 
 class Dashboard extends Component
 {
-    public function mount()
-    {
-        if (session()->has('message')) {
-            // dd(session()->get('message'));
-            $this->dispatchBrowserEvent('notification', ['type' => session()->get('type'), 'message' => session()->get('message')]);
-        }
-    }
 
     public function render()
     {

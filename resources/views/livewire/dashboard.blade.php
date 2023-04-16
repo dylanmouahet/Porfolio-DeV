@@ -149,7 +149,7 @@
                         @foreach ($message["liste"] as $message)
                             <tr>
                                 <td>{{ $message->name }}</td>
-                                <td>{{ $message->email }}</td>
+                                <td> <a href="mailto:{{ $message->email }}"><span class="badge bg-info bg-opacity-10 text-info }}">{{ $message->email }}</span></a> </td>
                                 <td>{{ reduceText($message->message) }}</td>
                                 <td>{{ formatDateForHuman($message->created_at) }}</td>
                             </tr>
@@ -182,7 +182,7 @@
                             <tr>
                                 <td>{{ $article->title }}</td>
                                 <td>{{ reduceText($article->description, 50) }}</td>
-                                <td>{{ $article->categorie->name }}</td>
+                                <td><span class="badge bg-{{ getCategoryColor($article->categorie->name) }} bg-opacity-10 text-{{ getCategoryColor($article->categorie->name) }}">{{ $article->categorie->name }}</span></td>
                                 <td>{{ $article->author }}</td>
                                 <td>{{ number_format($article->view_count) }}</td>
                             </tr>

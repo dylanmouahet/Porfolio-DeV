@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Storage;
 
 function setActiveRoute(String $route){
     $routeName = Route::currentRouteName();
@@ -30,4 +30,9 @@ function initials($str)
     }
 
     return strtoupper($acronym);
+}
+
+function getFileUrl($file){
+    $url = Storage::url($file);
+    return $url;
 }
